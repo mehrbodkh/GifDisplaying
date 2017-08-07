@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mehrbod.gifdisplayingsecond.MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open File"
+        android:id="@+id/buttonOpenFileMainActivity"
+        android:onClick="onOpenFileButtonClickListener"/>
+
+    <TextView
+        android:id="@+id/textViewFileAddressMainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonOpenFileMainActivity"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:textColor="#000000"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFileAddressMainActivity"
+        android:text="Convert To Gif"
+        android:id="@+id/buttonConvertToGifMainActivity"
+        android:onClick="onConvertToGifButtonClickListener"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Display Gif"
+        android:id="@+id/buttonDisplayGifMainActivity"
+        android:onClick="onDisplayGifButtonClickListener"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/buttonDisplayGifMainActivity"
+        android:id="@+id/simpleDrawee"/>
+
+</RelativeLayout>
